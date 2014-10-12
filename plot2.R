@@ -15,7 +15,7 @@ my_data <- subset(my_data, select = c(DatenTime,Global_active_power,
 my_data$DatenTime <- strptime(my_data$DatenTime, "%d/%m/%Y %H:%M:%S")
 
 ### Plot the graph
-png(file="plot2.png",width=504,height=504,type="cairo")
+png(file="plot2.png",width=480,height=480,type="cairo")
 par(mfrow=c(1,1),mar=c(5.1,4.1,4.1,2.1),cex=1)
 plot(my_data$DatenTime,my_data$Global_active_power,type = "n",
      xlab = "",ylab = "Global Active Power (kilowatts)")
